@@ -1,0 +1,8 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:drawable="@drawable/pitcher_anim1" android:duration="150"/>
+    <item android:drawable="@drawable/pitcher_anim2" android:duration="150"/>
+    <item android:drawable="@drawable/pitcher_anim3" android:duration="150"/>
+    <item android:drawable="@drawable/pitcher_anim4" android:duration="150"/>
+
+</animation-list>

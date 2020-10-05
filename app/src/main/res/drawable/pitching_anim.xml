@@ -1,0 +1,11 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="true" >
+
+    <item android:drawable="@drawable/pitching_anim1" android:duration="150"/>
+    <item android:drawable="@drawable/pitching_anim2" android:duration="150"/>
+    <item android:drawable="@drawable/pitching_anim3" android:duration="150"/>
+    <item android:drawable="@drawable/pitching_anim4" android:duration="150"/>
+    <item android:drawable="@drawable/pitching_anim5" android:duration="150"/>
+    <item android:drawable="@drawable/pitching_anim6" android:duration="150"/>
+    <item android:drawable="@drawable/pitching_anim7" android:duration="150"/>
+
+</animation-list>

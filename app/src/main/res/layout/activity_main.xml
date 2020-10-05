@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:weightSum="100"
+    android:background="@drawable/baseball_background">
+
+    <FrameLayout
+        android:id="@+id/start_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/start_back">
+
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Start Game"
+            android:textSize="24sp"
+            android:textColor="#FFDE34"
+            android:background="#00FFFFFF"/>
+
+        <ImageView
+            android:id="@+id/game_start_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/start"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/result_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/start_back">
+
+        <ImageView
+            android:id="@+id/game_over_view"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:src="@drawable/game_over"/>
+
+        <ImageView
+            android:id="@+id/game_win_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/win"
+            android:padding="10sp"/>
+
+        <Button
+            android:id="@+id/restart_button"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="ReStart"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="110dp"
+            android:textSize="20sp"
+            android:textColor="#292929" />
+
+        <Button
+            android:id="@+id/exit_button"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="Exit"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="40dp"
+            android:textSize="20sp"
+            android:textColor="#303030" />
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="45"
+        android:background="@drawable/baseball_stadium"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:id="@+id/head_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="48"
+            android:orientation="vertical"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:id="@+id/main_score_board"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="37"
+                android:background="@drawable/score_board1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginLeft="35dp">
+
+                    <ImageView
+                        android:id="@+id/outCount_view_0"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="top"
+                        android:src="@drawable/out_count_off"/>
+
+                    <ImageView
+                        android:id="@+id/outCount_view_1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="top"
+                        android:src="@drawable/out_count_off"/>
+
+                    <ImageView
+                        android:id="@+id/outCount_view_2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="top"
+                        android:src="@drawable/out_count_off"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/limitBall_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text=" 남은 투구수 : 6구"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FF1818"
+                android:gravity="center_horizontal"
+                android:layout_weight="10" />
+
+            <ImageView
+                android:id="@+id/pitcher_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="53"
+                android:src="@drawable/pitcher_anim"/>
+
+            <ImageView
+                android:id="@+id/pitching_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="53"
+                android:src="@drawable/pitching_anim"/>
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="52" >
+
+            <TextView
+                android:id="@+id/result_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:padding="5dp"
+                android:textSize="20sp"
+                android:layout_gravity="right"
+                android:background="#4D000000"/>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:layout_marginHorizontal="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/input_text_view_0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:textColor="#252525"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="20dp"
+            android:background="@drawable/baseball_ball"
+            />
+
+        <TextView
+            android:id="@+id/input_text_view_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:textColor="#252525"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="20dp"
+            android:background="@drawable/baseball_ball"
+            />
+
+        <TextView
+            android:id="@+id/input_text_view_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:textColor="#252525"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="20dp"
+            android:background="@drawable/baseball_ball"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="35"
+        android:orientation="vertical"
+        android:weightSum="90"
+        android:layout_marginHorizontal="10dp"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="22"
+                android:background="@drawable/num_buttons_select"
+                android:text="1"
+                android:textSize="30sp"
+                android:layout_margin="4dp"
+                android:textColor="#ffffff"
+                android:tag="1" />
+
+            <Button
+                android:id="@+id/button_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="22"
+                android:background="@drawable/num_buttons_select"
+                android:text="2"
+                android:textSize="30sp"
+                android:layout_margin="4dp"
+                android:textColor="#ffffff"
+                android:tag="2" />
+
+            <Button
+                android:id="@+id/button_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="22"
+                android:background="@drawable/num_buttons_select"
+                android:text="3"
+                android:textSize="30sp"
+                android:layout_margin="4dp"
+                android:textColor="#ffffff"
+                android:tag="3" />
+
+            <Button
+                android:id="@+id/button_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="22"
+                android:background="@drawable/num_buttons_select"
+                android:text="4"
+                android:textSize="30sp"
+                android:layout_margin="4dp"
+                android:textColor="#ffffff"
+                android:tag="4" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="22"
+                android:background="@drawable/num_buttons_select"
+                android:text="5"
+                android:textSize="30sp"
+                android:layout_margin="4dp"
+                android:textColor="#ffffff"
+                android:tag="5" />
+
+            <Button
+                android:id="@+id/button_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="22"
+                android:background="@drawable/num_buttons_select"
+                android:text="6"
+                android:textSize="30sp"
+                android:layout_margin="4dp"
+                android:textColor="#ffffff"
+                android:tag="6" />
+
+            <Button
+                android:id="@+id/button_7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="22"
+                android:background="@drawable/num_buttons_select"
+                android:text="7"
+                android:textSize="30sp"
+                android:layout_margin="4dp"
+                android:textColor="#ffffff"
+                android:tag="7" />
+
+            <Button
+                android:id="@+id/button_8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="22"
+                android:background="@drawable/num_buttons_select"
+                android:text="8"
+                android:textSize="30sp"
+                android:layout_margin="4dp"
+                android:textColor="#ffffff"
+                android:tag="8" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button_9"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="22"
+                android:background="@drawable/num_buttons_select"
+                android:text="9"
+                android:textSize="30sp"
+                android:layout_margin="4dp"
+                android:textColor="#ffffff"
+                android:tag="9" />
+
+            <Button
+                android:id="@+id/button_0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="22"
+                android:background="@drawable/num_buttons_select"
+                android:text="0"
+                android:textSize="30sp"
+                android:layout_margin="4dp"
+                android:textColor="#ffffff"
+                android:tag="0" />
+
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="22"
+                android:src="@drawable/ic_baseline_backspace_24"
+                android:scaleType="fitCenter"
+                android:padding="18dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/num_buttons_select" />
+
+            <ImageButton
+                android:id="@+id/play_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="22"
+                android:src="@drawable/baseball_hitter"
+                android:scaleType="fitCenter"
+                android:padding="5dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/num_buttons_select" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
